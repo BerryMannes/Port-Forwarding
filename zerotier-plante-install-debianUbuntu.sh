@@ -1,18 +1,11 @@
 #!/bin/bash 
-# Debain Ubuntu自动安装zerotier 并设置的为planet服务器 
-# 请在ip.txt文件设置Addr服务器公网ip
 ip=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/ip.txt -O - -q ; echo` 
-# 设置https访问端口
 httpsprot=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/httpsprot.txt -O - -q ; echo` 
-# 设置服务端口
 serverport=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/serverport.txt -O - -q ; echo` 
 addr=$ip/$serverport
 apt autoremove 
 apt update -y 
 apt install curl -y 
-echo "**************************************************************************************************************" 
-echo "**********************************Deabin Unbuntu自动安装Zerotier-Planet服务器**********************************" 
-echo "**************************************************************************************************************" 
 curl -s https://install.zerotier.com/ | sudo bash 
 identity=`cat /var/lib/zerotier-one/identity.public` 
 echo "identity :$identity" 
