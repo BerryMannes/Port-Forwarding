@@ -20,7 +20,7 @@ identity=`cat /var/lib/zerotier-one/identity.public`
 echo "identity :$identity==============================================" 
 apt-get -y install build-essential 
 apt-get install git -y 
-git clone https://github.com/BerryMannes/ZeroTierOne.git 
+git clone https://ghproxy.com/https://github.com/BerryMannes/ZeroTierOne.git 
 cd ./ZeroTierOne/attic/world/ 
 sed -i '/roots.push_back/d' ./mkworld.cpp 
 sed -i '/roots.back()/d' ./mkworld.cpp 
@@ -33,7 +33,7 @@ mv ./world.bin ./planet
 \cp -r ./planet /var/lib/zerotier-one/ 
 \cp -r ./planet /root 
 systemctl restart zerotier-one.service 
-wget https://gitee.com/opopop880/ztncui/attach_files/932632/download/ztncui_0.8.6_amd64.deb 
+wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/ztncui/ztncui_0.8.6_amd64.deb
 sudo dpkg -i ztncui_0.8.6_amd64.deb 
 cd /opt/key-networks/ztncui/ 
 echo "HTTPS_PORT = $httpsprot" >>./.env 
