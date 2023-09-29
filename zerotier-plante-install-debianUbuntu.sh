@@ -3,9 +3,9 @@
 # 请在ip.txt文件设置Addr服务器公网ip
 ip=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/ip.txt -O - -q ; echo` 
 # 设置https访问端口
-httpsprot=9877
+httpsprot=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/httpsprot.txt -O - -q ; echo` 
 # 设置服务端口
-serverport=9878
+serverport=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/serverport.txt -O - -q ; echo` 
 addr=$ip/$serverport
 apt autoremove 
 apt update -y 
