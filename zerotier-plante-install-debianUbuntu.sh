@@ -1,9 +1,7 @@
 #!/bin/bash 
 # Debain Ubuntu自动安装zerotier 并设置的为planet服务器 
-# 下面一条代码取消注释后为自动获取Addr服务器公网ip
-# ip=`wget http://ipecho.net/plain -O - -q ; echo` 
-# 下面一条代码取消注释后为手动设置Addr服务器公网ip
-ip=`39.103.212.40` 
+# 请在ip.txt文件设置Addr服务器公网ip
+ip=`wget https://ghproxy.com/https://raw.githubusercontent.com/BerryMannes/Port-Forwarding/main/ip.txt -O - -q ; echo` 
 # 设置https访问端口
 httpsprot=9877
 # 设置服务端口
