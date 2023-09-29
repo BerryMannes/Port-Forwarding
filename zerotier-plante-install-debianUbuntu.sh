@@ -39,7 +39,7 @@ cd /opt/key-networks/ztncui/
 echo "HTTPS_PORT = $httpsprot" >>./.env 
 secret=`cat /var/lib/zerotier-one/authtoken.secret` 
 echo "ZT_TOKEN = $secret" >>./.env 
-echo "ZT_ADDR=127.0.0.1:9993" >>./.env 
+echo "ZT_ADDR=127.0.0.1:$serverport" >>./.env 
 echo "NODE_ENV = production" >>./.env 
 echo "HTTP_ALL_INTERFACES=yes" >>./.env 
 systemctl restart ztncui 
