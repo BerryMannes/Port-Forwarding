@@ -17,7 +17,7 @@ echo "**********************************Deabin Unbuntu自动安装Zerotier-Plane
 echo "**************************************************************************************************************" 
 curl -s https://install.zerotier.com/ | sudo bash 
 identity=`cat /var/lib/zerotier-one/identity.public` 
-echo "identity :$identity==============================================" 
+echo "identity :$identity" 
 apt-get -y install build-essential 
 apt-get install git -y 
 git clone https://ghproxy.com/https://github.com/BerryMannes/ZeroTierOne.git 
